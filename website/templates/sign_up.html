@@ -3,6 +3,21 @@
 
 {% block main %}
 
-<h1>This is the sign up page</h1>
+<form class="sign-up-form" method="POST">
+  <h2>Sign Up</h2>
+  <label for="email-input">Email:
+    <input type="email" name="email" id="email-input">
+  </label>
+  <label for="first-name-input">First Name:
+    <input type="text" name="firstName" id="first-name-input">
+  </label>
+  <label for="password-input">Password:
+    <input type="text" name="password" id="password-input">
+  </label>
+  <label for="con-password-input">Password (Confirm):
+    <input type="text" name="conPassword" id="con-password-input">
+  </label>
+  <button type="submit">Signup</button>
+</form>
 
 {% endblock  %}
