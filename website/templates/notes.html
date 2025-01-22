@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Notes{% endblock %}
+
+{% block main %}
+
+<div class='sidebar'>
+  <h3>Your Notes</h3>
+  <ul>
+    {% for note in user.notes %}
+      <li>{{note.title}} <button onClick='deleteNote({{ note.id }})'>&times;</button></li>
+    {% endfor %}
+    
+  </ul>
+</div>
+<div class='note-body'>
+  <form class='note-form' method='POST'>
+    <label for="title-input">Title:
+      <input type="text" name="title" id="title-input">
+    </label>
+    <textarea name="content" id="note"></textarea>
+    <br>
+    <button type='submit'>Add Note</button>
+  </form>
+</div>
+
+{% endblock  %}
