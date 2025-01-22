@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+
+{% block main %}
+
+<h1>This is the login page</h1>
+{{ text }}
+{% if user %}
+  <h2>{{ user }}</h2>
+{% else %}
+  <h4>stranger</h4>
+{% endif %}
+
+{% endblock  %}
