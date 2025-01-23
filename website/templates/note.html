@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Notes{% endblock %}
+{% block title %}Note{% endblock %}
 
 {% block main %}
 
@@ -13,14 +13,9 @@
   </ul>
 </div>
 <div class='note-body'>
-  <form class='note-form' method='POST'>
-    <label for="title-input">Title:
-      <input type="text" name="title" id="title-input">
-    </label>
-    <textarea name="content" id="note"></textarea>
-    <br>
-    <button type='submit'>Add Note</button>
-  </form>
+  <h2>{{note.title}}</h2>
+  <p>{{note.content}}</p>
 </div>
 
-{% endblock  %}
+
+{% endblock %}

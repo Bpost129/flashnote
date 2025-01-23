@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, jsonify
+from flask import Blueprint, render_template, request, jsonify, redirect, url_for
 from flask_login import login_required, current_user
 from .models import Note
 from . import db
@@ -27,6 +27,13 @@ def notes():
       print('note added')
 
   return render_template("notes.html", user=current_user)
+
+@views.route('/notes/<int:noteId>', methods=['GET', 'POST'])
+@login_required
+def note(noteId):
+  for note in current_user.notes:
+    if note.id == noteId:
+      return render_template("note.html", user=current_user, note=note)
 
 @views.route('/delete-note', methods=['POST'])
 def delete_note():
