@@ -5,6 +5,16 @@
 
 <h1 class='welcome'>Welcome to <span>Flashnote</span></h1>
 
-
+<div class='recents-container'>
+  <h3>Recent Notes</h3>
+  <div class='recents'>
+    {% for note in user.notes %}
+      <a class='recent' href='/notes/{{note.id}}'>
+        <h4>{{note.title}}</h4>
+        <p>{{note.content}}</p>
+      </a>
+    {% endfor %}
+  </div>
+</div>
 
 {% endblock  %}

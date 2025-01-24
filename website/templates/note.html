@@ -8,14 +8,12 @@
   <ul>
     {% for note in user.notes %}
       <li><a href="/notes/{{note.id}}">{{note.title}}</a><button onClick='deleteNote({{ note.id }})'>&times;</button></li>
-    {% endfor %}
-    
+    {% endfor %}   
   </ul>
 </div>
 <div class='note-body'>
   <h2>{{note.title}}</h2>
   <p>{{note.content}}</p>
 </div>
-
 
 {% endblock %}
