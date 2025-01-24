@@ -8,13 +8,18 @@
 <div class='recents-container'>
   <h2>Recent Notes</h2>
   <div class='recents'>
-    {% for note in user.notes %}
-      <a class='recent' href='/notes/{{note.id}}'>
-        <h4>{{note.title}}</h4>
-        <p>{{note.content}}</p>
-        <div class="gradientback"></div>
-      </a>
-    {% endfor %}
+    {% if user.notes|length == 0 %}
+      <a id='empty' href="/notes">Add a Note</a>
+    {% else %}
+      {% set rev_notes = user.notes[::-1] %}
+      {% for note in rev_notes[0:3] %}
+        <a class='recent' href='/notes/{{note.id}}'>
+          <h4>{{note.title}}</h4>
+          <p>{{note.content}}</p>
+          <div class="gradientback"></div>
+        </a>
+      {% endfor %}
+    {% endif %}
   </div>
 </div>
 

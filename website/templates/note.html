@@ -6,7 +6,8 @@
 <div class='sidebar'>
   <h3>Your Notes</h3>
   <ul>
-    {% for note in user.notes %}
+    {% set rev_notes = user.notes[::-1] %}
+    {% for note in rev_notes %}
       <li><a href="/notes/{{note.id}}">{{note.title}}</a><button onClick='deleteNote({{ note.id }})'>&times;</button></li>
     {% endfor %}   
   </ul>
