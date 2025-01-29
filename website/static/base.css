@@ -43,10 +43,12 @@ a {
 
 #theme {
   margin-right: 30px;
-  height: 32px;
+  height: 35px;
   width: 35px;
   font-size: 20px;
+  /* color: red; */
   text-align: center;
+  border-radius: 50%;
 }
 
 .light {
