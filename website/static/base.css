@@ -274,13 +274,18 @@ a {
   /* justify-content: center; */
   width: 75%;
   padding: 10px;
+  background-image: url(https://media.istockphoto.com/id/172168250/photo/portrait-of-a-legal-pad-taking-up-the-entire-frame.jpg?s=612x612&w=0&k=20&c=wVBvgUKsMyBUggb8KH9lv7WKNz4DLBNBNCcBMa3eX_g=);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .note-form div {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 35%;
+  width: 350px;
+  margin-left: 120px;
 }
 
 .note-form label {
@@ -293,6 +298,7 @@ a {
 }
 
 .note-form input {
+  background: none;
   height: 26px;
   width: 200px;
   font-size: 20px;
@@ -301,13 +307,17 @@ a {
 }
 
 .note-form textarea{
-  width: 100%;
-  height: 120px;
-  margin-top: 20px;
+  background: none;
+  width: 80%;
+  height: 700px;
+  margin-top: 30px;
+  margin-left: 110px;
+  line-height: 24.65px;
   /* margin: 10px auto; */
-  border-radius: 8px;
-  /* border: none; */
+  /* border-radius: 8px; */
+  border: none;
   padding: 5px;
+  
 }
 
 .note-form button {
