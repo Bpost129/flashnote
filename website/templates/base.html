@@ -14,13 +14,18 @@
 <body>
   <nav>
     {% if user.is_authenticated %}
-    <a id='home' href="/">Home</a>
-    <a id='notes' href="/notes">Notes</a>
-    <a id='logout' href="/logout">Logout</a>
+    <div id="nav">
+      <a id='home' href="/">Home</a>
+      <a id='notes' href="/notes">Notes</a>
+      <a id='logout' href="/logout">Logout</a>
+    </div>
     {% else %}
-    <a id='signUp' href="/sign-up">Sign Up</a>
-    <a id='login' href="/login">Login</a>
+    <div id="nav">
+      <a id='signUp' href="/sign-up">Sign Up</a>
+      <a id='login' href="/login">Login</a>
+    </div>
     {% endif %}
+    <button id='theme'>☼</button>
   </nav>
 
   <div class='main-body'>

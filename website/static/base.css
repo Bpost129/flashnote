@@ -25,7 +25,7 @@ nav {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 
 a {
@@ -33,6 +33,30 @@ a {
   text-decoration: none;
   font-size: 20px;
   margin-left: 30px;
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#theme {
+  margin-right: 30px;
+  height: 32px;
+  width: 35px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.light {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: black;
+  color: white;
 }
 
 .main-body {
@@ -287,7 +311,7 @@ a {
 }
 
 .note-form button {
-  width: 100px;
+  min-width: 100px;
   height: 32px;
   font-size: 18px;
   border-radius: 8px;
