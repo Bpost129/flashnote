@@ -144,6 +144,10 @@ a {
 
 .recent h4 {
   font-size: 22px;
+  text-wrap: none ;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
 }
 
 .recent p {
@@ -196,6 +200,18 @@ a {
   width: 70px;
 }
 
+#create {
+  position: absolute;
+  padding: 0 20px;
+  transform: translateY(-8px);
+  font-size: 30px;
+  transition: transform 250ms ease-in;
+}
+
+#create:hover {
+  transform: scale(1.1) translateY(-8px) translateX(7px);
+}
+
 .sidebar {
   border-right: 3px solid rgb(200, 200, 200);
   background-color: rgb(230, 230, 230);
@@ -229,18 +245,6 @@ a {
   border-top: 2px solid rgb(200, 200, 200);
 }
 
-#create {
-  position: absolute;
-  padding: 0 20px;
-  transform: translateY(-8px);
-  font-size: 30px;
-  transition: transform 250ms ease-in;
-}
-
-#create:hover {
-  transform: scale(1.1) translateY(-8px) translateX(7px);
-}
-
 .sidebar a {
   color: black;
   text-decoration: none;
@@ -248,6 +252,10 @@ a {
   width: 200px;
   overflow-x: hidden;
   transition: transform 200ms ease-in;
+  text-wrap: none ;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
 }
 
 .sidebar a:hover {
